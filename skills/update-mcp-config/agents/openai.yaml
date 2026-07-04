@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update MCP Config"
+  short_description: "Sync MCP setup across local tools."
+  default_prompt: "Use $update-mcp-config to add or update an MCP server across Codex and Antigravity, test it, and save secret-safe backup notes."
