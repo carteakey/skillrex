@@ -13,6 +13,24 @@ Do not maintain parallel backlogs in Linear and GitHub Issues.
 
 ---
 
+## Choosing Linear or GitHub
+
+Follow the project's existing declared convention first.
+
+If no convention exists:
+
+- Use GitHub Issues when committed work belongs to one repository and keeping issues, pull requests, and Actions together is the simplest option.
+- Use Linear when planning spans multiple repositories or needs a centralized view of projects, milestones, dependencies, and priorities.
+- Use neither for trivial or one-off work that does not benefit from tracking.
+
+When both are equally suitable, prefer GitHub Issues because they keep planning with the code and avoid another system.
+
+GitHub Projects may organize GitHub Issues, but it is a view of the work rather than a second backlog.
+
+If both Linear and GitHub Issues already contain active work and no authority is declared, ask which one is authoritative before creating or updating issues. Do not copy or migrate items without an explicit request.
+
+---
+
 ## Before Starting Work
 
 1. Read the repository README and any relevant documentation.
