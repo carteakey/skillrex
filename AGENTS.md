@@ -4,7 +4,7 @@ Optimize for simplicity.
 
 - Git is the source of truth for code.
 - Markdown is the source of truth for documentation.
-- Each project has one source of truth for committed planned work: Linear when the project uses Linear, or GitHub Issues when the repository explicitly uses GitHub planning.
+- Each project has one source of truth for committed planned work. Linear is the default during the current trial; GitHub Issues is used only when the repository explicitly chooses GitHub planning.
 - Avoid creating process for its own sake.
 
 Prefer existing conventions over inventing new ones.
@@ -17,13 +17,17 @@ Do not maintain parallel backlogs in Linear and GitHub Issues.
 
 Follow the project's existing declared convention first.
 
-If no convention exists:
+If no convention exists, default to Linear for substantial, intentionally chosen development work. This applies to single-repository work as well as cross-repository planning so Linear receives a fair trial.
 
-- Use GitHub Issues when committed work belongs to one repository and keeping issues, pull requests, and Actions together is the simplest option.
-- Use Linear when planning spans multiple repositories or needs a centralized view of projects, milestones, dependencies, and priorities.
-- Use neither for trivial or one-off work that does not benefit from tracking.
+Choose GitHub Issues instead only when:
 
-When both are equally suitable, prefer GitHub Issues because they keep planning with the code and avoid another system.
+- The repository already declares GitHub Issues as its planning system.
+- The user explicitly requests a GitHub-native workflow.
+- The work must be public or contributor-facing in GitHub.
+
+Use neither tracker for trivial or one-off work that does not benefit from tracking.
+
+If Linear is unavailable, say so and continue without silently switching the project to GitHub Issues. Do not let tracker availability block explicitly requested implementation work.
 
 GitHub Projects may organize GitHub Issues, but it is a view of the work rather than a second backlog.
 
@@ -58,7 +62,7 @@ Store:
 - future possibilities
 - rough notes
 
-Linear—or GitHub Issues in a repository that explicitly uses it—is for commitments.
+Linear is the default for commitments. GitHub Issues serves that role only in a repository that explicitly chooses it.
 
 Create or update an issue only when work has been intentionally chosen for implementation. An explicit implementation request counts as an intentional choice.
 
