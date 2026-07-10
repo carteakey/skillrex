@@ -1,0 +1,4 @@
+interface:
+  display_name: "WhatsApp Bridge"
+  short_description: "Operate the local WhatsApp MCP bridge"
+  default_prompt: "Use $whatsapp-bridge to diagnose the local WhatsApp bridge and query messages safely."
