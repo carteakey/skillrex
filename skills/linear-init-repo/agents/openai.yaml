@@ -1,0 +1,12 @@
+interface:
+  display_name: "Initialize Repo in Linear"
+  short_description: "Set up focused Linear planning for a repo."
+  default_prompt: "Use $linear-init-repo to initialize focused Linear planning for this repository without promoting speculative TODO items."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "linear"
+      description: "Linear MCP server for project and issue management"
+      transport: "streamable_http"
+      url: "https://mcp.linear.app/mcp"
