@@ -24,6 +24,30 @@ Prefer existing conventions over inventing new ones.
 
 ---
 
+## TODO.md vs Linear
+
+`TODO.md` is for thinking.
+
+Store:
+
+- ideas
+- research
+- questions
+- future possibilities
+- rough notes
+
+Linear is for commitments.
+
+Create or update a Linear issue only when work has been intentionally chosen for implementation.
+
+Do not create Linear issues for speculative ideas.
+
+When an idea in `TODO.md` becomes an active objective, remove it from `TODO.md` and create a Linear issue.
+
+Do not duplicate the same item in both places.
+
+---
+
 ## During Implementation
 
 - Keep changes focused on the current issue.
