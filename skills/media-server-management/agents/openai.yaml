@@ -1,4 +1,0 @@
-interface:
-  display_name: "Media Server Management"
-  short_description: "Manage fx505 media apps and NFS"
-  default_prompt: "Use $media-server-management to check and repair the homelab media server stack."
