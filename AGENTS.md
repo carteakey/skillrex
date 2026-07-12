@@ -38,15 +38,20 @@ If both Linear and GitHub Issues already contain active work and no authority is
 ## Before Starting Work
 
 1. Read the repository README and any relevant documentation.
-2. Determine whether the project uses Linear, GitHub Issues, or no formal issue tracker. Follow the existing convention and do not introduce a tracker for trivial work.
-3. When choosing what to work on:
+2. Check Forge at `/Users/kchauhan/wikis/forge` for private project context:
+   - Look for `projects/<repository-name>/Project.md` first.
+   - If the directory name differs, search Forge project frontmatter for the repository's absolute path in `repo` or `local_path`.
+   - Read the matching `Project.md`, `Scratchpad.md`, and only the additional notes relevant to the current task.
+   - If no matching Forge project exists, continue normally; do not create one for trivial or speculative work unless the user asks.
+3. Determine whether the project uses Linear, GitHub Issues, or no formal issue tracker. Follow the existing convention and do not introduce a tracker for trivial work.
+4. When choosing what to work on:
    - If Linear is the planning system and Linear MCP is available, find the active project, read the current milestone, and review the highest-priority open issues.
    - If GitHub Issues is the planning system, use `gh` when it is sufficient.
-4. When given a specific task:
+5. When given a specific task:
    - Treat an explicit implementation request as intentionally chosen work.
    - Read the relevant issue, milestone, comments, and related issues only as needed.
    - If substantial work in a project with a chosen tracker has no issue, suggest creating one there, but do not block implementation solely because an issue is absent unless repository conventions require one.
-5. Do not start implementing until the problem is understood.
+6. Do not start implementing until the problem is understood.
 
 ---
 
@@ -103,6 +108,35 @@ Prefer:
 - `DECISIONS.md`
 
 Avoid duplicating information across multiple files.
+
+### Forge: Private Project Context
+
+Forge at `/Users/kchauhan/wikis/forge` is the private working layer for development projects.
+
+Use Forge for:
+
+- private or pre-publication specifications
+- working ideas and exploratory designs
+- active project scratchpads
+- agent handoffs and investigation notes
+- links to the repository, Linear, Notion, documentation, and other project systems
+- context that is valuable to future agents but does not belong in the public repository
+
+Source-of-truth boundaries:
+
+- The repository remains authoritative for code, public/canonical documentation, architecture, and checked-in decisions.
+- The project's declared tracker remains authoritative for committed work.
+- Forge is authoritative only for private working context and project pointers.
+- Generic technical notes remain in `vault-76`, not Forge.
+
+Privacy and publication rules:
+
+- Do not copy Forge content into a repository, issue, pull request, public documentation, or external service unless the user explicitly requests it.
+- Treat Forge notes as private by default even when the project repository is public.
+- Never store secrets, credentials, tokens, recovery codes, or private production data in Forge.
+- Prefer links and concise context over duplicating repository documentation or tracker items.
+
+When a matching Forge project already exists and implementation materially changes its status, next action, or private working context, update its `Project.md` or `Scratchpad.md` as part of the work. Do not create a parallel backlog there.
 
 ---
 
