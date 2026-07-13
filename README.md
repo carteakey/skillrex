@@ -11,6 +11,25 @@ This repo is the maintained home for reusable skills that should work across age
 - `marketplace/catalog.md` - generated human-readable catalog.
 - `scripts/build_index.py` - catalog generator.
 
+## Current Skills
+
+- `email-management` - Himalaya email workflows plus scheduled newsletter, OTP/security, and smart organizer jobs.
+- `event-monitoring` - recurring web/event discovery, including the historical Toronto Meetup monitor.
+- `research/toronto-weekend-events` - Toronto weekend digest collection and formatting.
+- `research/tpl-map-pass-monitor` - TPL MAP/ePass availability checks without committed credentials.
+- `notes/vault-76-organization` - weekly Markdown vault summary and task extraction.
+
+## Historical Cron Mapping
+
+- `Newsletter Cleanup (Weekly)` -> `email-management`
+- `OTP/Security Cleanup (Weekly)` -> `email-management`
+- `Smart Inbox Organizer (Weekly)` -> `email-management`
+- `TPL Map Monitor Heartbeat Fixed` -> `research/tpl-map-pass-monitor`
+- `TPL Map Pass Monitor (Active Alerts)` -> `research/tpl-map-pass-monitor`
+- `Meetup Event Discovery (Toronto)` -> `event-monitoring`
+- `Vault-76 Sync & Organization (Weekly)` -> `notes/vault-76-organization`
+- `Toronto Weekend Digest` -> `research/toronto-weekend-events`
+
 ## Install Manually
 
 Copy a skill folder into the target agent's skills directory.

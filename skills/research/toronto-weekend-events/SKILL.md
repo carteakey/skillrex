@@ -7,6 +7,10 @@ description: Aggregate Toronto events from multiple sources (blogTO, Eventbrite,
 
 Scrape, deduplicate, and curate weekend events/activities in Toronto from multiple sources into a categorized Telegram-friendly digest.
 
+## Historical Schedule
+
+The old automation ran daily at 19:00 and delivered to Telegram. Recreate scheduling outside this skill using cron, systemd timers, GitHub Actions, or the active agent's scheduler. If total event quality is too low, return exactly `[SILENT]`.
+
 ## Source Priority & Access Methods
 
 ### 🥇 Primary — blogTO (most structured, reliable)

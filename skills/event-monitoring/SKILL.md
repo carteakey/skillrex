@@ -28,3 +28,4 @@ When the user requests a recurring check for new items on a website (e.g., "Moni
 
 ## References
 - `references/meetup-monitoring-workflow.md`
+- `references/scheduled-jobs.md`

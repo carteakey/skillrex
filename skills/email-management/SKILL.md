@@ -25,7 +25,8 @@ Automate repetitive email tasks to maintain a zero-inbox or highly organized sta
 - **Security/OTP Archival:** Identify and archive security alerts and one-time passwords after they expire.
 - **Smart Inbox Organization:** Rules-based categorization (e.g., Finance, Updates, Career).
 - **Temporal Archival:** Time-based cleanup of old emails (e.g., OTPs older than 24h).
-- **Automation Reference:** Detailed logic and templates are in `references/automation/`.
+- **Automation Reference:** Detailed logic and templates are in `references/himalaya/`.
+- **Scheduled Jobs:** Historical cron behavior is summarized in `references/scheduled-jobs.md`.
 
 ## Pitfalls
 - **Non-interactive environments:** Always use the `-y` flag with `himalaya` when running from agents or scripts to avoid hanging on prompts.
