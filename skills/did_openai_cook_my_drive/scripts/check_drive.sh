@@ -82,9 +82,29 @@ case "$OS_TYPE" in
         
     Darwin) # macOS
         echo "System: macOS (Apple Silicon or Intel)"
-        echo -e "\nTo check your SSD write wear on macOS, install smartmontools via Homebrew:"
-        echo "  brew install smartmontools"
-        echo "  sudo smartctl -A /dev/disk0"
+        
+        SMARTCTL_BIN=""
+        if command -v smartctl >/dev/null 2>&1; then
+            SMARTCTL_BIN="smartctl"
+        elif [ -x "/opt/homebrew/bin/smartctl" ]; then
+            SMARTCTL_BIN="/opt/homebrew/bin/smartctl"
+        elif [ -x "/opt/homebrew/sbin/smartctl" ]; then
+            SMARTCTL_BIN="/opt/homebrew/sbin/smartctl"
+        fi
+
+        if [ -n "$SMARTCTL_BIN" ]; then
+            echo -e "\nRunning SMART/NVMe Health Query via $SMARTCTL_BIN:"
+            if $SMARTCTL_BIN -a /dev/disk0 2>/dev/null | grep -E "Percentage Used|Data Units Written|Data Units Read|Temperature:|SMART overall-health"; then
+                :
+            else
+                echo "  (smartctl output unavailable or requires elevated privileges)"
+            fi
+        else
+            echo -e "\nTo check your SSD write wear on macOS, install smartmontools via Homebrew:"
+            echo "  /opt/homebrew/bin/brew install smartmontools"
+            echo "  smartctl -a /dev/disk0"
+        fi
+
         echo -e "\n*Important Note:* macOS /tmp and \$TMPDIR sit on the on-disk APFS volume."
         echo "Do NOT use the symlink-to-tmp stopgap on macOS as it will not spare your SSD."
         echo "Update Codex instead."
@@ -96,3 +116,4 @@ case "$OS_TYPE" in
 esac
 
 echo "============================================="
+
