@@ -4,6 +4,30 @@
   "schema_version": 1,
   "skills": [
     {
+      "name": "deal-finder",
+      "path": "deal-finder",
+      "category": "",
+      "description": "Scrapes and summarizes the top deals from rfd.davegallant.ca.",
+      "version": "",
+      "platforms": [],
+      "scripts": [],
+      "references": [],
+      "templates": []
+    },
+    {
+      "name": "did-openai-cook-my-drive",
+      "path": "did_openai_cook_my_drive",
+      "category": "",
+      "description": "Checks if the user is affected by the OpenAI Codex CLI SSD wear bug (TRACE logging to SQLite). Diagnoses the local database size, version, and guides the user on checking SSD write wear stats on Linux, macOS, and Windows.",
+      "version": "",
+      "platforms": [],
+      "scripts": [
+        "scripts/check_drive.sh"
+      ],
+      "references": [],
+      "templates": []
+    },
+    {
       "name": "email-management",
       "path": "email-management",
       "category": "",
@@ -42,20 +66,58 @@
       "templates": []
     },
     {
-      "name": "vault-76-organization",
-      "path": "notes/vault-76-organization",
-      "category": "notes",
-      "description": "Summarize and organize a local Markdown notes vault by pulling latest changes, reviewing recent notes, extracting tasks, and producing a concise executive digest.",
+      "name": "fleet-bandwidth",
+      "path": "fleet-bandwidth",
+      "category": "",
+      "description": "Monitor real-time network activity, per-process bandwidth utilization, and socket connections across all homelab fleet devices (KPC, FX505, Mac Server M1, MacBook Air M2, and Raspberry Pi) using bandwhich. Use this skill when the user asks to check network activity, diagnose high bandwidth usage, inspect network traffic across machines, or generate a fleet bandwidth report.",
       "version": "",
       "platforms": [],
+      "scripts": [
+        "scripts/fleet_bandwidth.py"
+      ],
+      "references": [
+        "references/hosts.json",
+        "references/troubleshooting.md"
+      ],
+      "templates": []
+    },
+    {
+      "name": "himalaya",
+      "path": "himalaya",
+      "category": "",
+      "description": "Himalaya CLI: IMAP/SMTP email from terminal.",
+      "version": "1.1.0",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "scripts": [],
+      "references": [
+        "references/configuration.md",
+        "references/message-composition.md"
+      ],
+      "templates": []
+    },
+    {
+      "name": "llm-wiki",
+      "path": "llm-wiki",
+      "category": "",
+      "description": "Karpathy's LLM Wiki: build/query interlinked markdown KB.",
+      "version": "2.1.0",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
       "scripts": [],
       "references": [],
       "templates": []
     },
     {
       "name": "toronto-weekend-events",
-      "path": "research/toronto-weekend-events",
-      "category": "research",
+      "path": "toronto-weekend-events",
+      "category": "",
       "description": "Aggregate Toronto events from multiple sources (blogTO, Eventbrite, Meetup, r/toronto, Narcity) into a categorized digest. Covers weekend events, career/professional Meetup monitoring, and delta-based change detection. Designed for cron delivery.",
       "version": "",
       "platforms": [],
@@ -71,9 +133,20 @@
     },
     {
       "name": "tpl-map-pass-monitor",
-      "path": "research/tpl-map-pass-monitor",
-      "category": "research",
+      "path": "tpl-map-pass-monitor",
+      "category": "",
       "description": "Monitor Toronto Public Library MAP/ePass availability for configured attractions and report only when target passes are available; use for TPL MAP pass checks, heartbeat checks, and silent-if-no-results scheduled runs.",
+      "version": "",
+      "platforms": [],
+      "scripts": [],
+      "references": [],
+      "templates": []
+    },
+    {
+      "name": "vault-76-organization",
+      "path": "vault-76-organization",
+      "category": "",
+      "description": "Summarize and organize a local Markdown notes vault by pulling latest changes, reviewing recent notes, extracting tasks, and producing a concise executive digest.",
       "version": "",
       "platforms": [],
       "scripts": [],

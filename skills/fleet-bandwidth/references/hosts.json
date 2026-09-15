@@ -1,0 +1,47 @@
+[
+  {
+    "id": "kpc",
+    "name": "KPC (Workstation)",
+    "target": "local",
+    "platform": "linux",
+    "bin": "bandwhich",
+    "ip": "192.168.0.76",
+    "tailscale_ip": "100.110.126.24"
+  },
+  {
+    "id": "fx505",
+    "name": "FX505 (Laptop)",
+    "target": "fx505-ts",
+    "platform": "linux",
+    "bin": "bandwhich",
+    "ip": "192.168.0.86",
+    "tailscale_ip": "100.81.22.64"
+  },
+  {
+    "id": "m1",
+    "name": "Mac Server (Apple M1)",
+    "target": "m1",
+    "platform": "macos",
+    "bin": "/opt/homebrew/bin/bandwhich",
+    "ip": "192.168.0.56",
+    "tailscale_ip": "100.89.197.43"
+  },
+  {
+    "id": "m2",
+    "name": "Macbook Air (Apple M2)",
+    "target": "m2",
+    "platform": "macos",
+    "bin": "/opt/homebrew/bin/bandwhich",
+    "ip": "DHCP",
+    "tailscale_ip": "100.109.129.110"
+  },
+  {
+    "id": "rpi",
+    "name": "Raspberry Pi 4",
+    "target": "rpi",
+    "platform": "linux",
+    "bin": "/usr/local/bin/bandwhich",
+    "ip": "192.168.0.85",
+    "tailscale_ip": "100.81.82.24"
+  }
+]
