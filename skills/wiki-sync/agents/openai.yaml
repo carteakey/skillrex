@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wiki Sync"
+  short_description: "Audit, backup, and sync Obsidian vaults and knowledge wikis"
+  default_prompt: "Use $wiki-sync to audit my wiki vaults, pull incoming notes from other devices, and push backups to GitHub."
