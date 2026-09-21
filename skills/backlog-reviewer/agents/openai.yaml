@@ -1,4 +1,4 @@
 interface:
   display_name: "Backlog Reviewer"
   short_description: "Review backlog readiness and completion evidence"
-  default_prompt: "Use $backlog-reviewer to audit this backlog before implementation and verify the resulting PRs and tracker state afterward."
+  default_prompt: "Use $backlog-reviewer to audit this backlog before implementation, verify the resulting PRs afterward, and produce bounded remediation packets for any failed gates."

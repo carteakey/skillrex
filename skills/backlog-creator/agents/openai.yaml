@@ -1,0 +1,12 @@
+interface:
+  display_name: "Backlog Creator"
+  short_description: "Discover and prepare the next burn-ready backlog"
+  default_prompt: "Use $backlog-creator to inspect the latest repository and PR state, discover the next opportunities, and prepare a deduplicated backlog packet for pre-implementation review and Backlog Burner."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "linear"
+      description: "Linear MCP server for project and issue management"
+      transport: "streamable_http"
+      url: "https://mcp.linear.app/mcp"

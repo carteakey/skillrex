@@ -1,0 +1,4 @@
+interface:
+  display_name: "Splitwise Expense Updates"
+  short_description: "Verify and safely enter Splitwise expenses"
+  default_prompt: "Use $splitwise-expense-updates to verify and enter my shared expenses through MCP, browser, or a manual queue."

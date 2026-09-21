@@ -111,3 +111,17 @@ Start with counts: repositories, issues, PRs, pre-ready items, post-passing item
 | --- | --- | --- | --- | --- | --- |
 
 Finish with separate sections for blockers, committed non-blocking follow-ups, excluded opportunities, and preserved private artifacts.
+
+For each failed post-implementation gate, add:
+
+| Remediation field | Required value |
+| --- | --- |
+| Tracker truth | Issue identifier, current state, baseline acceptance, and state to use before work |
+| Reuse | Existing branch, worktree, PR, base/head SHA, and dependency topology |
+| Gap | Exact missing behavior or evidence; distinguish implementation from verification debt |
+| Scope | Allowed files or evidence actions plus explicit non-goals |
+| Verification | Focused, full, hosted, runtime, visual, cleanup, and negative evidence required |
+| Safety | Credentials, private data, production targets, protected operations, and recovery limits |
+| Completion | Evidence required before Done; say when no code or commit is necessary |
+
+This packet is the scope boundary for Backlog Burner remediation. Re-open an incorrectly Done issue before mutation when authorized; retain the original acceptance baseline for the next post-review.

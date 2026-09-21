@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCP Revival"
+  short_description: "Diagnose and restore broken MCP servers."
+  default_prompt: "Use $mcp-revival to diagnose and restore unavailable MCP servers across local clients."

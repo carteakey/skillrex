@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketplace Listing Assistant"
+  short_description: "Price, draft, and create fast-selling marketplace listings"
+  default_prompt: "Use $marketplace-listing-assistant to inspect my item photos, check market pricing, draft an attractive Facebook Marketplace listing, and create it in my signed-in browser when I ask."

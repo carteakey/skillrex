@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backlog Burner"
+  short_description: "Clear multi-repo TODO backlogs end to end"
+  default_prompt: "Use $backlog-burner to reconcile and implement the canonical backlog or a Backlog Reviewer remediation packet, preserving existing branches and requiring evidence-backed completion."

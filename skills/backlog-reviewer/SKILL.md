@@ -84,6 +84,7 @@ For every claimed result:
 8. Check documentation, configuration examples, changelog/release state, and rollback or recovery instructions against actual behavior.
 9. Verify tracker issue, milestone, and project states are truthful. External dependencies remain open even when scaffolding exists.
 10. Confirm original dirty/private work and unrelated branches were preserved.
+11. Distinguish missing code from missing evidence. A real runtime, browser, binding, or artifact gate may close the gap without a code change or empty commit.
 
 Return one verdict per issue or PR:
 
@@ -126,6 +127,17 @@ Do not create speculative follow-up issues. Do not fix product code under this s
 
 After writes, re-read every modified object and verify no parallel backlog or accidental publication was created.
 
+For every **Needs revision**, **Not complete**, or **Blocked after implementation** verdict, produce a bounded remediation packet for Backlog Burner. Include:
+
+- issue identifier, current state, baseline acceptance, and missing evidence;
+- exact existing branch, worktree, and PR to reuse;
+- allowed implementation or evidence scope and explicit non-goals;
+- verification environment, protected operations, cleanup, and privacy boundaries;
+- the state transition required before mutation and the evidence required before returning to Done;
+- whether an evidence-only repair with no new commit is acceptable.
+
+When tracker reconciliation is authorized, move an incorrectly Done issue to the appropriate active state and record the gap before implementation begins. Do not rewrite acceptance criteria to match the eventual result.
+
 ## 7. Produce the review packet
 
 Lead with the overall gate:
@@ -134,7 +146,7 @@ Lead with the overall gate:
 - **Post:** completion justified, partially justified, or rejected.
 - **Full lifecycle:** planned scope delivered, drift requiring action, and truthful remaining dependencies.
 
-Then provide a compact matrix with repository, issue/PR, verdict, strongest evidence, missing evidence, dependency, and required action. Separate:
+Then provide a compact matrix with repository, issue/PR, verdict, strongest evidence, missing evidence, dependency, and required action. For failed gates, append the bounded remediation packet rather than leaving Backlog Burner to rediscover scope. Separate:
 
 1. blocking findings;
 2. non-blocking follow-ups already committed;
@@ -143,8 +155,8 @@ Then provide a compact matrix with repository, issue/PR, verdict, strongest evid
 
 End with one actionable handoff:
 
-- `Use $backlog-burner to implement the items marked Ready.`
-- `Address the failed review gates, then rerun $backlog-reviewer in post-implementation mode.`
+- `Use $backlog-burner to implement the items marked Ready from this reviewed baseline.`
+- `Use $backlog-burner in remediation mode on the failed gates in this packet, then rerun $backlog-reviewer in post-implementation mode.`
 - `Use $backlog-creator to investigate the unrelated opportunities excluded from this review.`
 
 Do not automatically invoke another skill unless the user asks to continue.

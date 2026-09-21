@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bookmark Curator"
+  short_description: "Migrate and maintain a lean bookmark library"
+  default_prompt: "Use $bookmark-curator to audit and clean up my bookmarks safely."

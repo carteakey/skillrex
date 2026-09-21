@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Sync"
+  short_description: "Audit, fast-forward, and push git repositories across workspaces"
+  default_prompt: "Use $repo-sync to audit all repositories in my workspace, pull updates, and push all local branches."

@@ -231,3 +231,14 @@ When finishing:
 - Summarize completed work.
 - Identify any remaining blockers.
 - Suggest the next logical task from the project's chosen planning system if available.
+
+---
+
+## Network Service URLs
+
+Whenever starting, exposing, or reporting a local network service:
+
+- Check the machine's current Tailscale IPv4 address with `tailscale ip -4`.
+- Always provide URLs using the Tailscale IP for every relevant exposed port or route.
+- Also provide localhost or LAN URLs when useful, but never omit the Tailscale URLs when Tailscale is available.
+- Do not assume a previously observed Tailscale address is still current; query it again before reporting URLs.

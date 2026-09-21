@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find & Register Tech Events"
+  short_description: "Find and safely register for tech events"
+  default_prompt: "Use $find-tech-events to find the best upcoming events and, if I explicitly authorize it, register me for selected free events."

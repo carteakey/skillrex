@@ -1,0 +1,4 @@
+interface:
+  display_name: "Declutter Decider"
+  short_description: "Objectively decide whether to keep, sell, donate, or recycle items"
+  default_prompt: "Use $declutter-decider to help me decide whether I should keep, sell, or donate this item."
