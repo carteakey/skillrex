@@ -128,6 +128,19 @@
       "templates": []
     },
     {
+      "name": "model-inventory-manager",
+      "path": "model-inventory-manager",
+      "category": "",
+      "description": "Audit and cleanup model files and configurations. Use when identifying old models, cleaning up disk space, or reconciling serving configs with physical files.",
+      "version": "",
+      "platforms": [],
+      "scripts": [
+        "scripts/audit_models.py"
+      ],
+      "references": [],
+      "templates": []
+    },
+    {
       "name": "refresh-llama",
       "path": "refresh-llama",
       "category": "",

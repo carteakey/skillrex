@@ -49,6 +49,12 @@
 - Path: `llm-wiki`
 - Description: Karpathy's LLM Wiki: build/query interlinked markdown KB.
 
+## model-inventory-manager
+
+- Path: `model-inventory-manager`
+- Description: Audit and cleanup model files and configurations. Use when identifying old models, cleaning up disk space, or reconciling serving configs with physical files.
+- Scripts: 1
+
 ## refresh-llama
 
 - Path: `refresh-llama`

@@ -21,6 +21,7 @@ This repo is the maintained home for reusable skills that should work across age
 - `vault-76-organization` - weekly Markdown vault summary and task extraction.
 - `llm-wiki` - Andrej Karpathy's LLM Wiki pattern for interlinked markdown knowledge bases.
 - `system-performance` - system load, memory, swap, and thermal diagnostics.
+- `model-inventory-manager` - audit local LLM model files against `llama-swap.yaml`, find orphans and stale serving entries (absorbed from L3MS).
 
 ## Historical Cron Mapping
 
