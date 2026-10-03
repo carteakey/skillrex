@@ -1,0 +1,18 @@
+{
+  "ok": false,
+  "packageAllowed": false,
+  "installed": false,
+  "candidate": "clean-bodylocked-synthesis",
+  "passing": [
+    "eight separated row-10 poses",
+    "source geometry and final-cell edge gate",
+    "stable broad body lock and baseline",
+    "337.5-to-000 wrap scale and center",
+    "180 down and 000 up vertical cardinals",
+    "single deterministic chroma despill",
+    "1536x2288 spriteVersionNumber 2 atlas validation"
+  ],
+  "blockingFinding": "Strict majority blind QA classified hard horizontal cardinals oppositely: source 270 as screen-right and source 090 as screen-left.",
+  "policy": "Hard cardinal mismatches cannot be overridden or installed.",
+  "nextSafeAction": "Regenerate both coherent look rows from cardinal anchors whose viewer-coordinate left/right meaning is independently verified before interpolation."
+}

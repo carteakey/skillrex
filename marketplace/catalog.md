@@ -1,5 +1,12 @@
 # skillrex Catalog
 
+## hatch-pet-fastpath
+
+- Path: `creative/hatch-pet-fastpath`
+- Category: `creative`
+- Description: Add quota-aware staging, early visual approval, repair routing, and final-QA ordering to Codex v2 animated pet production. Use with hatch-pet when the user wants a fast or low-waste pet workflow, wants to approve a base before full animation, mentions limited image-generation quota, requests a retro low-poly or PS2-style pet, or wants to avoid repeated full-atlas rebuilds.
+- References: 1
+
 ## deal-finder
 
 - Path: `deal-finder`
@@ -41,6 +48,18 @@
 
 - Path: `llm-wiki`
 - Description: Karpathy's LLM Wiki: build/query interlinked markdown KB.
+
+## refresh-llama
+
+- Path: `refresh-llama`
+- Description: Inspect upstream llama.cpp changes, track open pull requests, update/fast-forward master (Gold tier), maintain the Unified QSA Sparsity + MTP branch, compile server/bench binaries, and verify model serving through llama-swap. Use this skill when the user asks to refresh llama, update llama.cpp, check upstream commits or PRs, rebuild llama-server/llama-bench, or verify gold/experimental serving parity.
+- Scripts: 1
+- References: 1
+
+## system-performance
+
+- Path: `system-performance`
+- Description: Performs system load, memory, swap, and thermal diagnostics on macOS and Linux hosts, identifies resource hogs (including ANECompilerService/CoreML loops), and outputs a formatted markdown performance report. Trigger this skill whenever the user asks about system slowness, diagnostic reports, or system monitoring.
 
 ## toronto-weekend-events
 

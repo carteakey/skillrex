@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hatch Pet Fastpath"
+  short_description: "Quota-aware animated pet production"
+  default_prompt: "Use $hatch-pet-fastpath to create a Codex pet with staged visual approval and efficient QA."

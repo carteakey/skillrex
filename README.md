@@ -13,11 +13,14 @@ This repo is the maintained home for reusable skills that should work across age
 
 ## Current Skills
 
+- `creative/hatch-pet-fastpath` - quota-aware staging and convergence rules for animated sprite and pet generation (absorbed from Assethetic).
 - `email-management` - Himalaya email workflows plus scheduled newsletter, OTP/security, and smart organizer jobs.
 - `event-monitoring` - recurring web/event discovery, including the historical Toronto Meetup monitor.
-- `research/toronto-weekend-events` - Toronto weekend digest collection and formatting.
-- `research/tpl-map-pass-monitor` - TPL MAP/ePass availability checks without committed credentials.
-- `notes/vault-76-organization` - weekly Markdown vault summary and task extraction.
+- `toronto-weekend-events` - Toronto weekend digest collection and formatting.
+- `tpl-map-pass-monitor` - TPL MAP/ePass availability checks without committed credentials.
+- `vault-76-organization` - weekly Markdown vault summary and task extraction.
+- `llm-wiki` - Andrej Karpathy's LLM Wiki pattern for interlinked markdown knowledge bases.
+- `system-performance` - system load, memory, swap, and thermal diagnostics.
 
 ## Historical Cron Mapping
 
