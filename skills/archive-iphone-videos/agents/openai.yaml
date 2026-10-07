@@ -1,0 +1,4 @@
+interface:
+  display_name: "Archive iPhone Videos"
+  short_description: "Archive large videos before freeing iCloud space"
+  default_prompt: "Use $archive-iphone-videos to archive my largest iPhone videos to Google Drive and prepare verified iCloud cleanup."
