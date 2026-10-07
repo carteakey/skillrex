@@ -28,13 +28,13 @@ echo "==================================================================="
 echo " 2. Strata Upstream Delta (vendor/strata)"
 echo "==================================================================="
 if [ -d "${L3MS_ROOT}/vendor/strata" ]; then
-    git -C "${L3MS_ROOT}/vendor/strata" fetch origin --tags -q
+    git -C "${L3MS_ROOT}/vendor/strata" fetch origin --tags --force -q
     CURRENT_STRATA=$(git -C "${L3MS_ROOT}/vendor/strata" describe --tags --always 2>/dev/null || echo "unknown")
-    LATEST_TAG=$(git -C "${L3MS_ROOT}/vendor/strata" tag --sort=-v:refname | head -1)
+    LATEST_TAG=$(git -C "${L3MS_ROOT}/vendor/strata" tag --sort=-v:refname 2>/dev/null | { head -1 || true; })
     echo "Current local Strata checkout : ${CURRENT_STRATA}"
     echo "Latest upstream release tag   : ${LATEST_TAG}"
     echo "Recent upstream releases:"
-    git -C "${L3MS_ROOT}/vendor/strata" tag --sort=-v:refname | head -5 | sed 's/^/   /'
+    git -C "${L3MS_ROOT}/vendor/strata" tag --sort=-v:refname 2>/dev/null | { head -5 || true; } | sed 's/^/   /'
     echo "Top commit on upstream main:"
     git -C "${L3MS_ROOT}/vendor/strata" log origin/main -1 --oneline | sed 's/^/   /'
 else
