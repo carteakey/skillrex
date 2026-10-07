@@ -5,7 +5,7 @@ description: Export large iPhone videos from a synced Mac Photos library to Goog
 
 # Archive iPhone Videos
 
-Preserve original bytes in the user's chosen Drive account before removing selected assets from iCloud Photos. Upload requests alone do not authorize deleting originals.
+By default, preserve and verify original bytes in the user's chosen Drive account before removing selected assets from iCloud Photos. Upload requests alone do not authorize deleting originals.
 
 ## Scope and inventory
 
@@ -28,7 +28,7 @@ Preserve original bytes in the user's chosen Drive account before removing selec
 
 ## Authorized cleanup
 
-- Re-identify exact assets from the manifest and UI before deleting. Remove only cloud-verified assets within the user's cleanup scope. iCloud Photos deletion propagates to other synced devices.
+- Re-identify exact assets from the manifest and UI before deleting. By default, remove only cloud-verified assets within the user's cleanup scope. If the user explicitly requests deletion while uploads continue, first verify and retain complete local originals with exact sizes/checksums, explain that cloud backup is unfinished, and obtain any required irreversible-deletion confirmation. Record this run-specific override; do not carry it into future runs. iCloud Photos deletion propagates to other synced devices.
 - Check current Apple guidance/account state before relying on recovery. Normally Recently Deleted offers recovery and does not count toward iCloud storage, so emptying it is unnecessary for space recovery.
 - When iCloud exceeds its storage limit, deletion may immediately remove assets without recovery. Obtain action-time confirmation for irreversible deletion after presenting the verified archive and exact files; generic cleanup approval does not replace that confirmation.
 - Never empty unrelated Recently Deleted items. Verify source removal and sync/storage updates when available. Distinguish expected original-byte savings from observed reclaimed iCloud space.
