@@ -12,7 +12,7 @@ Preserve original bytes in the user's chosen Drive account before removing selec
 - Establish whether videos are in synced Mac Photos, on a connected iPhone, or already exported. The Mac must be unlocked for Photos UI access. A full iCloud account can leave newer iPhone videos unsynced.
 - Ground the Drive account and folder; confirm the account when several exist. Preserve sharing settings.
 - Rank by original bytes, not duration. For Mac Photos, run `scripts/inventory_videos.py --library '<Photos Library.photoslibrary>' --limit 5`. It reads SQLite without modifying it; schema failures must not be treated as an empty library.
-- Honor the user's count/threshold; otherwise propose a small batch. Keep a private manifest of UUID, filename, date, duration, and original size. Filenames repeat, so match search results by date/duration and retain UUIDs.
+- Honor the user's count/threshold; otherwise propose a small batch. Keep a private manifest of UUID, filename, date, duration, and original size. Filenames repeat, so match search results by date/duration and retain UUIDs. Convert the helper's UTC dates to Photos' display timezone when matching.
 - Check free space before each batch, allowing for download/export and Drive sync caches. Avoid downloading the whole library or changing global Photos settings for a selective archive.
 
 ## Export and upload
@@ -22,7 +22,7 @@ Preserve original bytes in the user's chosen Drive account before removing selec
 - Preserve original filenames unless collision handling requires a date/UUID suffix. Refuse to overwrite an existing destination file. Record an MD5 checksum for Drive comparison.
 - Use the Google Drive skill/connector when available, inspecting current schemas and upload limits. A 512 MiB connector limit was observed; do not retry oversized videos repeatedly or split/re-encode them without a request.
 - For large files, use an already installed Drive desktop sync folder after verifying its account and destination, or use an authenticated browser file upload. Retain the staging file until cloud verification. If desktop transfers cancel or local sync files disappear, stop relying on that route, inspect the cloud folder, and retry from a retained export through another supported interface. Verify syncing actually starts.
-- A file in the local sync folder is not a verified cloud backup. Observe upload completion and read cloud metadata in the target folder. Compare exact byte size and `md5Checksum` when available. If the connector omits checksums, use another authenticated Drive interface or download-copy comparison before source deletion.
+- A file in the local sync folder is not a verified cloud backup. Observe upload completion and read cloud metadata in the target folder. Compare exact byte size and `md5Checksum` when available; displayed GB values may use different units. If the connector omits checksums, use another authenticated Drive interface or download-copy comparison before source deletion.
 - For disk pressure, use the provider's supported remove-download/free-space operation only after cloud verification. Never delete the cloud file or Photos library internals to clear a cache.
 - Maintain per-file states: inventoried, exported, uploading, cloud-verified, source-removed. Attribute progress/ETA to Drive; report pending uploads honestly. Do not call the archive complete until all selected files pass verification.
 
