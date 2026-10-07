@@ -139,8 +139,33 @@ Results append directly to `logs/results/qwen38-refresh-ab.jsonl`.
    ```bash
    systemctl --user start llama-swap.service
    ```
-2. If updating production serving macros in `llama-swap.yaml`:
-   - Snapshot yaml: `cp llama-swap.yaml llama-swap.yaml.bak-$(date +%Y%m%d-%H%M%S)`
-   - Update binary paths or server flags (e.g. `--moe-cache-mib 2048` or new Strata binary).
-   - Hot-reload router: `kill -HUP $(pgrep '[l]lama-swap')`
-   - Run a test completion with `max_tokens >= 64`.
+2. Synchronize production serving configuration via `scripts/sync-serving.sh`:
+   ```bash
+   ~/.gemini/config/skills/qwen4exp-refresh/scripts/sync-serving.sh qwen38-flash-next-plat
+   ```
+   *This automated step:*
+   - Snapshots `llama-swap.yaml` (`llama-swap.yaml.bak-YYYYmmdd-HHMMSS`).
+   - Verifies all binaries exist.
+   - Hot-reloads the router via `kill -HUP $(pgrep '[l]lama-swap')`.
+   - Runs a smoke test with `max_tokens >= 64` (checking `reasoning_content` for reasoning models).
+
+---
+
+### Step 5: Live Site & Blog Updates
+
+1. **Update Dashboard Metadata:**
+   Append new benchmarks and progression milestones to `docs/dashboard-meta.json`.
+2. **Recompile Dashboard Data:**
+   ```bash
+   python3 docs/generate_dashboard_data.py
+   python3 -m unittest docs/test_generate_dashboard_data.py
+   ```
+3. **Cache-Busting & Validation:**
+   Ensure `<script src="generated-models.js?v=YYYYMMDD"></script>` in `docs/index.html` has an updated timestamp query parameter to bypass Cloudflare/browser caching.
+4. **Push Updates:**
+   ```bash
+   git add docs/
+   git commit -m "feat(dashboard): update qwen4exp benchmark refresh and evolution tracker"
+   git push github main
+   ```
+   *(If updating blog posts, rebase and push `carteakey.dev` as well).*

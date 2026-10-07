@@ -36,9 +36,26 @@ fi
 # 3. Build Strata Latest
 if [ -d "${L3MS_ROOT}/vendor/strata-latest" ]; then
     log "Building Strata latest tier (vendor/strata-latest)..."
+    if [ ! -e "${L3MS_ROOT}/vendor/strata-latest/.venv" ] && [ -d "${L3MS_ROOT}/vendor/strata/.venv" ]; then
+        ln -sf "${L3MS_ROOT}/vendor/strata/.venv" "${L3MS_ROOT}/vendor/strata-latest/.venv"
+    fi
     export PATH="${L3MS_ROOT}/vendor/strata/.venv/bin:$PATH"
     cmake --build "${L3MS_ROOT}/vendor/strata-latest/build" --target strata -j"${NPROC}"
-    ok "Strata latest built: ${L3MS_ROOT}/vendor/strata-latest/build/strata"
+
+    # Ensure runtime configs exist for strata-latest
+    if [ ! -f "${L3MS_ROOT}/vendor/strata-latest/strata-iq3_xxs.json" ] && [ -f "${L3MS_ROOT}/vendor/strata/strata-iq3_xxs.json" ]; then
+        sed -e 's|vendor/strata/engine/strata|vendor/strata-latest/build/strata|g' \
+            -e 's|vendor/strata/data|vendor/strata-latest/data|g' \
+            -e 's|vendor/strata|vendor/strata-latest|g' \
+            "${L3MS_ROOT}/vendor/strata/strata-iq3_xxs.json" > "${L3MS_ROOT}/vendor/strata-latest/strata-iq3_xxs.json"
+    fi
+    if [ ! -f "${L3MS_ROOT}/vendor/strata-latest/strata-vision.json" ] && [ -f "${L3MS_ROOT}/vendor/strata/strata-vision.json" ]; then
+        sed -e 's|vendor/strata/engine/strata|vendor/strata-latest/build/strata|g' \
+            -e 's|vendor/strata/data|vendor/strata-latest/data|g' \
+            -e 's|vendor/strata|vendor/strata-latest|g' \
+            "${L3MS_ROOT}/vendor/strata/strata-vision.json" > "${L3MS_ROOT}/vendor/strata-latest/strata-vision.json"
+    fi
+    ok "Strata latest built & configured: ${L3MS_ROOT}/vendor/strata-latest/build/strata"
 fi
 
 echo "All targets built successfully."
