@@ -28,9 +28,9 @@ When moving to another service or store, reread the source cart immediately befo
 
 Read current offer terms: eligible store and items, delivery/pickup restriction, minimum eligible subtotal, percentage, discount cap, expiry with displayed timezone, exclusions, and stacking restrictions. Treat offer availability as separate from application.
 
-For percentage rate r and cap C, the eligible subtotal that reaches the cap is C/r. Check that this also meets the minimum. For example, 40% capped at $20 reaches its cap at $50 of eligible groceries. Use the service's qualifying subtotal; sale items, fees, taxes, and tips may be excluded. Do not invent eligibility or assume sale discounts stack.
+Default to the smallest useful basket that qualifies for the chosen coupon and relevant delivery-fee minimum, allowing a small buffer when weighed items or stock changes could affect eligibility. Start from the requested groceries and sensible quantities; exceed that target for actual needs or useful, well-priced additions, with extras suggested separately unless authorized. If a top-up is needed, compare its incremental cost after discount with the savings and fees it unlocks; qualifying for a coupon is not automatically cheaper than ordering the original basket.
 
-Prioritize needed groceries. Spend beyond the cap only for actual needs; do not add wasteful filler to maximize a coupon. Show the incremental cost and discount when recommending a top-up. A gift card is payment, not an additional merchandise discount.
+For percentage rate r and cap C, the eligible subtotal that reaches the cap is C/r. This is a discount limit, not a spending target: do not add filler merely to maximize the discount. For example, 30% off $45+ capped at $18 gives $13.50 off at $45; spending $60 reaches the cap but costs another $10.50 after discount. Use the service's qualifying subtotal; sale items, fees, taxes, and tips may be excluded. Do not invent eligibility or assume sale discounts stack. Compare the final delivered total, not just the discount amount. A gift card is payment, not an additional merchandise discount.
 
 ## Build and verify
 
