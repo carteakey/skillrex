@@ -22,6 +22,7 @@ This repo is the maintained home for reusable skills that should work across age
 - `llm-wiki` - Andrej Karpathy's LLM Wiki pattern for interlinked markdown knowledge bases.
 - `system-performance` - system load, memory, swap, and thermal diagnostics.
 - `model-inventory-manager` - audit local LLM model files against `llama-swap.yaml`, find orphans and stale serving entries (absorbed from L3MS).
+- `repository-management/github-repo-cleanup` - safe repo pruning: inventory, safe-delete classification, fork unique-commit checks, migrating notes before deletion, and verification.
 
 ## Historical Cron Mapping
 

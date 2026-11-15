@@ -44,6 +44,11 @@
 - Description: Himalaya CLI: IMAP/SMTP email from terminal.
 - References: 2
 
+## letterboxd-log-watches
+
+- Path: `letterboxd-log-watches`
+- Description: Add historical cinema watches to a user's Letterboxd diary from receipts, booking confirmations, ticket text, screenshots, or pasted showtime lists. Use when Codex must parse film titles and screening dates, prepare one or more dated Letterboxd diary entries in the user's logged-in browser, avoid duplicates, obtain required save confirmation, and verify the resulting diary rows.
+
 ## llm-wiki
 
 - Path: `llm-wiki`
@@ -55,11 +60,26 @@
 - Description: Audit and cleanup model files and configurations. Use when identifying old models, cleaning up disk space, or reconciling serving configs with physical files.
 - Scripts: 1
 
+## qwen4exp-refresh
+
+- Path: `qwen4exp-refresh`
+- Description: Audit, refresh, build, and benchmark both Strata (Platinum tier) and llama.cpp (Gold & Experimental tiers) for Qwen3.8-Flash-Next (qwen4exp). Tracks merged and open PRs (native MTP, MoE LRU cache, fast FA, indexer optimizations), maintains worktrees, compiles server binaries, and executes standardized 7-way parity benchmarks against identical model quants.
+- Scripts: 4
+- References: 1
+
 ## refresh-llama
 
 - Path: `refresh-llama`
 - Description: Inspect upstream llama.cpp changes, track open pull requests, update/fast-forward master (Gold tier), maintain the Unified QSA Sparsity + MTP branch, compile server/bench binaries, and verify model serving through llama-swap. Use this skill when the user asks to refresh llama, update llama.cpp, check upstream commits or PRs, rebuild llama-server/llama-bench, or verify gold/experimental serving parity.
 - Scripts: 1
+- References: 1
+
+## github-repo-cleanup
+
+- Path: `repository-management/github-repo-cleanup`
+- Category: `repository-management`
+- Description: Audit and prune a GitHub account's repositories safely. Use when the user asks which repos to delete, wants to consolidate notes/docs repos, clean up forks, archive stale projects, or reduce repo sprawl. Covers inventory, safe-delete classification, fork unique-commit checks, migrating content before deletion, the delete_repo scope, local clone cleanup, and verification.
+- Scripts: 2
 - References: 1
 
 ## system-performance

@@ -113,6 +113,17 @@
       "templates": []
     },
     {
+      "name": "letterboxd-log-watches",
+      "path": "letterboxd-log-watches",
+      "category": "",
+      "description": "Add historical cinema watches to a user's Letterboxd diary from receipts, booking confirmations, ticket text, screenshots, or pasted showtime lists. Use when Codex must parse film titles and screening dates, prepare one or more dated Letterboxd diary entries in the user's logged-in browser, avoid duplicates, obtain required save confirmation, and verify the resulting diary rows.",
+      "version": "",
+      "platforms": [],
+      "scripts": [],
+      "references": [],
+      "templates": []
+    },
+    {
       "name": "llm-wiki",
       "path": "llm-wiki",
       "category": "",
@@ -141,6 +152,24 @@
       "templates": []
     },
     {
+      "name": "qwen4exp-refresh",
+      "path": "qwen4exp-refresh",
+      "category": "",
+      "description": "Audit, refresh, build, and benchmark both Strata (Platinum tier) and llama.cpp (Gold & Experimental tiers) for Qwen3.8-Flash-Next (qwen4exp). Tracks merged and open PRs (native MTP, MoE LRU cache, fast FA, indexer optimizations), maintains worktrees, compiles server binaries, and executes standardized 7-way parity benchmarks against identical model quants.",
+      "version": "",
+      "platforms": [],
+      "scripts": [
+        "scripts/audit-prs.sh",
+        "scripts/build-all.sh",
+        "scripts/run-ab-bench.sh",
+        "scripts/sync-serving.sh"
+      ],
+      "references": [
+        "references/tiers.md"
+      ],
+      "templates": []
+    },
+    {
       "name": "refresh-llama",
       "path": "refresh-llama",
       "category": "",
@@ -152,6 +181,22 @@
       ],
       "references": [
         "references/tiers.md"
+      ],
+      "templates": []
+    },
+    {
+      "name": "github-repo-cleanup",
+      "path": "repository-management/github-repo-cleanup",
+      "category": "repository-management",
+      "description": "Audit and prune a GitHub account's repositories safely. Use when the user asks which repos to delete, wants to consolidate notes/docs repos, clean up forks, archive stale projects, or reduce repo sprawl. Covers inventory, safe-delete classification, fork unique-commit checks, migrating content before deletion, the delete_repo scope, local clone cleanup, and verification.",
+      "version": "",
+      "platforms": [],
+      "scripts": [
+        "scripts/audit.sh",
+        "scripts/fork-check.sh"
+      ],
+      "references": [
+        "references/lessons.md"
       ],
       "templates": []
     },
